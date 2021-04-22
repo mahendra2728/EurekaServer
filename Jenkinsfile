@@ -2,7 +2,6 @@ pipeline {
     agent any
     tools {
         maven 'maven-3.6.3' 
-		java 'jdk-8'
     }
     stages {
         stage('Build') {
@@ -13,7 +12,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'java -version'
                 echo 'Testing..'
             }
         }
